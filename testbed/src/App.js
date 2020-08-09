@@ -1,25 +1,15 @@
+/*eslint no-unused-expressions: "error"*/
+
 import React from 'react';
+import BoilerplateComponent from 'react-npm-package';
+import u from 'react-npm-package/utils';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  u();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BoilerplateComponent label="Test" onChange={() => {}} />
   );
 }
 
