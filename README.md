@@ -2,16 +2,12 @@
     "name": "react-npm-package",
     "version": "1.0.0",
     "description": "React Boilerplate Component for npm",
-    "main": "./",
+    "main": "./dist",
     "license": "MIT",
     "scripts": {
-        "setup": "npm install && cd testbed/ && npm install",
-        "build": "npm run build:webpack && npm run copy:assets && npm run symlink",
+        "copy:assets": "cp package.json dist/",
         "build:webpack": "webpack",
-        "copy:assets": "cp package.json README.md dist/",
-        "symlink": "cd dist/ && npm link && cd .. && cd testbed/ && npm link react-npm-package",
-        "start": "concurrently \"npm run build:webpack:watch\" \"cd testbed/ && npm start\"",
-        "build:webpack:watch": "webpack --watch"
+        "build": "npm run build:webpack && npm run copy:assets"
     },
     "peerDependencies": {
         "prop-types": "^15.6.0",
@@ -25,7 +21,6 @@
         "babel-plugin-transform-object-rest-spread": "^6.26.0",
         "babel-plugin-transform-react-jsx": "^6.24.1",
         "babel-preset-env": "^1.6.1",
-        "concurrently": "^5.3.0",
         "path": "^0.12.7",
         "prop-types": "^15.6.0",
         "react": "^16.0.0",
